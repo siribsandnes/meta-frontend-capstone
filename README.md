@@ -1,6 +1,6 @@
 # Little Lemon
 
-This project is developed as a **capstone project** for the **React Frontend EDV Course**.
+This project is developed as a **capstone project** for the **React Frontend-end developer Course** at Coursera.
 
 Little Lemon is a fictional Mediterranean restaurant web application built using React and Vite. The project showcases component-based architecture, modern routing, responsive design, and state management best practices.
 
