@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
