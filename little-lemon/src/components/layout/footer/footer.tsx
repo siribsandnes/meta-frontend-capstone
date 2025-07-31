@@ -1,9 +1,12 @@
-import Logo from "../../../assets/Logo.svg";
+import styles from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <footer>
-      <img src={Logo} alt="Little Lemon Logo" />
+    <footer className={styles.footer}>
+      <h1>Little Lemon</h1>
+      <p>© 2023 Little Lemon. All rights reserved.</p>
+      <p>Location: Our address</p>
+      <p></p>
     </footer>
   );
 };

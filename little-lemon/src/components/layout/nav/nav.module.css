@@ -6,4 +6,14 @@
   text-decoration: none;
   color: inherit;
   padding: 10px;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.link:hover {
+  color: #f4ce14;
+}
+
+.link:last-child {
+  padding-right: 0;
 }
