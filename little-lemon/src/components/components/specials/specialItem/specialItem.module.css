@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.specialItem {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(229, 230, 223);
+  border-radius: 5px;
+  width: 350px;
+  min-height: 450px;
+}
+
+.price {
+  color: rgb(208, 23, 23);
+}
+
+.content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.link {
+  margin-top: auto;
+  align-self: flex-start;
+}

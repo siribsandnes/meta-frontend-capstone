@@ -1,9 +1,10 @@
 .footer {
   background-color: #495e57;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  margin-top: auto;
+  /* position: fixed; */ /* ❌ Remove this line */
+  /* left: 0; */ /* ❌ Remove this line */
+  /* bottom: 0; */ /* ❌ Remove this line */
   width: 100%;
   color: white;
-  padding: 20px 40px;
+  padding: 20px 80px;
 }
