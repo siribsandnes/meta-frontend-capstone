@@ -26,6 +26,14 @@
   gap: 6px;
 }
 
+.about h1{
+      color: #2d3834;
+}
+  
+.about h2{
+      color:  #495e57;
+}
+
 img {
   max-width: 450px;
   border-radius: 10px;

@@ -9,7 +9,7 @@ const Hero = () => {
     navigate("/reservation");
   };
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.textSection}>
         <div className={styles.about}>
           <h1>Little lemon</h1>
@@ -24,12 +24,12 @@ const Hero = () => {
           </p>
         </div>
 
-        <Button onClick={handleClick}>Reserve a table</Button>
+        <Button color="primary" onClick={handleClick}>Reserve a table</Button>
       </div>
       <div className={styles.imgSection}>
         <img className={styles.img} src={lemonImg} alt="Little Lemon" />
       </div>
-    </div>
+    </section>
   );
 };
 

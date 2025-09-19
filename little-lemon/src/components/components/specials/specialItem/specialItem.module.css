@@ -14,6 +14,12 @@
   width: 350px;
   min-height: 450px;
 }
+.specialItem:hover {
+
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  background-color: #5e5e497a;
+}
 
 .price {
   color: rgb(208, 23, 23);
@@ -28,5 +34,10 @@
 
 .link {
   margin-top: auto;
+  display: flex;
   align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap:4px;
+  color: #495e57;
 }

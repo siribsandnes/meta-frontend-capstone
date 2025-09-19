@@ -5,6 +5,7 @@ import About from "../../pages/about/about";
 import Menu from "../../pages/menu/menu";
 import OrderOnline from "../../pages/orderOnline/orderOnline";
 import Login from "../../pages/login/login";
+import Rating from "../../pages/rating/rating";
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <Route path="/menu" element={<Menu />} />
         <Route path="/orderOnline" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/rating" element={<Rating />} />
       </Routes>
     </main>
   );

@@ -9,55 +9,55 @@ import risotto from "../../../assets/risotto.png";
 const dishes = [
   {
     title: "Bruschetta",
-    description: "Ristet brød med tomat, hvitløk, basilikum og olivenolje.",
+    description: "Toasted bread with tomato, garlic, basil and olive oil.",
     price: 69,
     img: bruschetta,
   },
   {
-    title: "Caprese salat",
-    description: "Mozzarella, tomat og fersk basilikum med olivenolje.",
+    title: "Caprese Salad",
+    description: "Mozzarella, tomato and fresh basil with olive oil.",
     price: 89,
     img: caprese,
   },
   {
     title: "Risotto ai funghi",
-    description: "Kremet risotto med sopp og parmesan.",
+    description: "Creamy risotto with mushrooms and parmesan.",
     price: 149,
     img: risotto,
   },
   {
     title: "Pizza Margherita",
-    description: "Klassisk pizza med tomatsaus, mozzarella og fersk basilikum.",
+    description: "Classic pizza with tomato sauce, mozzarella and fresh basil.",
     price: 159,
   },
   {
     title: "Spaghetti alle vongole",
-    description: "Spaghetti med ferske hjerteskjell, hvitløk og persille.",
+    description: "Spaghetti with fresh clams, garlic and parsley.",
     price: 169,
   },
   {
     title: "Lasagne al forno",
-    description: "Lagvis pasta med kjøttsaus, béchamel og parmesan.",
+    description: "Layered pasta with meat sauce, béchamel and parmesan.",
     price: 159,
   },
   {
     title: "Melanzane alla parmigiana",
-    description: "Ovnsbakt aubergine med tomatsaus og parmesan.",
+    description: "Oven-baked eggplant with tomato sauce and parmesan.",
     price: 139,
   },
   {
     title: "Focaccia",
-    description: "Luftig brød med olivenolje, rosmarin og havsalt.",
+    description: "Airy bread with olive oil, rosemary and sea salt.",
     price: 49,
   },
   {
-    title: "Gresk salat",
-    description: "Salat med fetaost, oliven, tomat, agurk og rødløk.",
+    title: "Greek Salad",
+    description: "Salad with feta cheese, olives, tomato, cucumber and red onion.",
     price: 99,
   },
   {
     title: "Tiramisu",
-    description: "Italiensk dessert med mascarpone, kaffe og kakao.",
+    description: "Italian dessert with mascarpone, coffee and cocoa.",
     price: 79,
   },
 ];
@@ -70,10 +70,10 @@ const Specials = () => {
     navigate("/menu");
   };
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.header}>
         <h1>Specials</h1>
-        <Button onClick={handleClick}>See full menu</Button>
+        <Button color="primary" onClick={handleClick}>See full menu</Button>
       </div>
       <div className={styles.specialsList}>
         {specials.map((dish) => (
@@ -86,7 +86,7 @@ const Specials = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
