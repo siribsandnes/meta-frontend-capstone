@@ -13,8 +13,8 @@ const Nav = () => {
       <Link className={styles.link} to="/menu">
         Menu
       </Link>
-      <Link className={styles.link} to="/reservation">
-        Reservations
+      <Link className={styles.link} to="/booking">
+        Booking
       </Link>
       <Link className={styles.link} to="/orderOnline">
         Order Online
