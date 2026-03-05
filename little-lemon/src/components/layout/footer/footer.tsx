@@ -6,7 +6,6 @@ const Footer = () => {
       <h1>Little Lemon</h1>
       <p>© 2023 Little Lemon. All rights reserved.</p>
       <p>Location: Our address</p>
-      <p></p>
     </footer>
   );
 };

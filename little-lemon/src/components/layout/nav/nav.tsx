@@ -3,7 +3,7 @@ import styles from "./nav.module.css";
 
 const Nav = () => {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} aria-label="Main navigation">
       <Link className={styles.link} to="/">
         Home
       </Link>

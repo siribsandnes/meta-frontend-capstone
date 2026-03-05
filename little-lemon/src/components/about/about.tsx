@@ -4,11 +4,11 @@ import restaurantImg from '../../assets/restaurant.png'
 const About = () => {
     return (
       <section className={styles.container}>
-        <div >
+        <figure>
           <img src={restaurantImg} alt="Restaurant" />
-        </div>
+        </figure>
 
-        <div>
+        <article>
           <h1>About Little Lemon</h1>
           <h2>Chicago</h2>
           <p>
@@ -19,7 +19,7 @@ const About = () => {
           <p>
             At Little Lemon, our chefs blend traditional recipes with fresh, local ingredients to create unforgettable flavors. Whether you're celebrating a special occasion or just stopping by for a quick bite, our friendly staff is here to make your experience memorable. Join us for our seasonal specials and discover why Little Lemon is a favorite spot in Chicago!
           </p>
-        </div>
+        </article>
       </section>
     );
 }
