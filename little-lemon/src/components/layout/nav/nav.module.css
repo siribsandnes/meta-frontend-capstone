@@ -2,6 +2,15 @@
   display: flex;
 }
 
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+    
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -14,6 +23,6 @@
   color: #f4ce14;
 }
 
-.link:last-child {
+.list li:last-child .link {
   padding-right: 0;
 }

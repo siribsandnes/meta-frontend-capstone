@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <Button color="primary" onClick={handleClick}>Reserve a table</Button>
+        <Button color="primary" onClick={handleClick} ariaLabel="On Click">Reserve a table</Button>
       </div>
       <div className={styles.imgSection}>
         <img className={styles.img} src={lemonImg} alt="Little Lemon" />

@@ -6,15 +6,17 @@ interface ButtonProps {
   color: "primary" | "secondary";
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
+  ariaLabel?: string;
 }
 
-const Button = ({ children, onClick, color, type = "button", disabled = false }: ButtonProps) => {
+const Button = ({ children, onClick, color, type = "button", disabled = false, ariaLabel }: ButtonProps) => {
   return (
     <button 
       className={`${styles.button} ${styles[color]} ${disabled ? styles.disabledButton : ""}`} 
       onClick={onClick} 
       type={type} 
       disabled={disabled}
+      aria-label={ariaLabel}
     >
       {children}
     </button>
