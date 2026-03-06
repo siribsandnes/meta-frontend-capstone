@@ -8,3 +8,9 @@
 
 }
 
+.divider{
+    border-top: 2px solid rgb(229, 230, 223);
+    width: 100%;
+    max-width: 600px;
+}   
+

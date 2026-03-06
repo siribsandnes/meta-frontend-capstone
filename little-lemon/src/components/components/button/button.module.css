@@ -25,3 +25,15 @@
   background-color: #f8e68e;
   transition: background-color 0.3s ease;
 }
+
+.disabledButton {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.disabledButton:hover {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

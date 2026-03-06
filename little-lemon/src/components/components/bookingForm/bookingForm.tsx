@@ -3,18 +3,16 @@ import Button from "../button/button";
 import { useState } from "react";
 import type { BookingProps } from "../../pages/booking/booking";
 import { submitAPI } from "../../../mockAPI/mockAPI";
-
-type FormData = {
-  date: string;
-  time: string;
-  guests: number;
-  occasion: string;
-  specialRequests: string;
-};
+import { useNavigate } from "react-router-dom";
+import {
+  isValidBookingForm,
+  type BookingFormData,
+} from "./bookingForm.validation";
 
 const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) => {
+  const navigate = useNavigate();
 
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<BookingFormData>({
       date: "",
       time: "",
       guests: 1,
@@ -22,7 +20,7 @@ const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) =
       specialRequests: "",
     });
 
-  const handleChange = (variable: keyof FormData, value: string | number) => {
+  const handleChange = (variable: keyof BookingFormData, value: string | number) => {
     const newFormData = {
       ...formData,
       [variable]: value
@@ -36,8 +34,10 @@ const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) =
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-   const result = submitAPI(formData);
-   console.log("Form submission result:", result); // Logger resultatet av submitAPI
+    const result = submitAPI(formData);
+    if (result) {      
+      navigate("/confirmedBooking");
+    }
     setFormData({
       date: "",
       time: "",
@@ -169,6 +169,7 @@ const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) =
         <Button
      color="secondary"
      type="submit"
+        disabled={!isValidBookingForm(formData)}
         >
           Reserve table
         </Button>

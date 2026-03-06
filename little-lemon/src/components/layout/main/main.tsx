@@ -8,6 +8,7 @@ import Rating from "../../pages/rating/rating";
 import Booking from "../../pages/booking/booking";
 import { useReducer } from "react";
 import { initializeTimes, updateTimes } from "./times";
+import ConfirmedBooking from "../../components/confirmedBooking/confirmedBooking";
 
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking availableTimes={availableTimes} dispatchAvailableTimes={dispatchAvailableTimes} />} />
+        <Route path="/confirmedBooking" element={<ConfirmedBooking />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/orderOnline" element={<OrderOnline />} />

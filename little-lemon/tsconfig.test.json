@@ -4,7 +4,8 @@
     "module": "CommonJS",
     "verbatimModuleSyntax": false,
     "esModuleInterop": true,
-    "allowImportingTsExtensions": false
+    "allowImportingTsExtensions": false,
+     "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

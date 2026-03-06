@@ -11,7 +11,9 @@ const Booking = ({ availableTimes, dispatchAvailableTimes }: BookingProps) => {
   return (
     <div className={styles.container}>
       <h1>Reserve a table</h1>
+      <hr className={styles.divider}/>
       <BookingForm availableTimes={availableTimes} dispatchAvailableTimes={dispatchAvailableTimes} />
+      
     </div>
   );
 };
