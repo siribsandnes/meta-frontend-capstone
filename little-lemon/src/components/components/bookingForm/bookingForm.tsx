@@ -2,6 +2,7 @@ import styles from "./bookingForm.module.css";
 import Button from "../button/button";
 import { useState } from "react";
 import type { BookingProps } from "../../pages/booking/booking";
+import { submitAPI } from "../../../mockAPI/mockAPI";
 
 type FormData = {
   date: string;
@@ -26,13 +27,17 @@ const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) =
       ...formData,
       [variable]: value
     };
+
+
     setFormData(newFormData);
     console.log(newFormData); // Logger den nye dataen
   }
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted with data:", formData);
+   const result = submitAPI(formData);
+   console.log("Form submission result:", result); // Logger resultatet av submitAPI
     setFormData({
       date: "",
       time: "",
