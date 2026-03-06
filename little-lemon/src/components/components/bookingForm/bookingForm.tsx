@@ -11,6 +11,7 @@ import {
 
 const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) => {
   const navigate = useNavigate();
+  const [submitError, setSubmitError] = useState("");
 
     const [formData, setFormData] = useState<BookingFormData>({
       date: "",
@@ -28,7 +29,7 @@ const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) =
 
 
     setFormData(newFormData);
-    console.log(newFormData); // Logger den nye dataen
+    setSubmitError("");
   }
 
 
@@ -37,20 +38,19 @@ const BookingForm = ({ availableTimes, dispatchAvailableTimes }: BookingProps) =
     const result = submitAPI(formData);
     if (result) {      
       navigate("/confirmedBooking");
+      return;
     }
-    setFormData({
-      date: "",
-      time: "",
-      guests: 1,
-      occasion: "",
-      specialRequests: ""
-    });
-    // Her kan du legge til logikk for å sende dataen til en server eller lignende
+    setSubmitError("We could not complete your booking right now. Please try again.");
   }
 
 
     return (
       <form className={styles.bookingForm} aria-label="Restaurant table reservation form" onSubmit={handleSubmit}>
+        {submitError ? (
+          <p className={styles.errorText} role="alert" aria-live="assertive">
+            {submitError}
+          </p>
+        ) : null}
         <div style={{display: "flex", flexDirection: "column"}}>
           <label 
             htmlFor="res-date"

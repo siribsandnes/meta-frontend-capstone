@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# Little Lemon Capstone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Restaurant web app built with React, TypeScript and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Landing page sections: hero, specials, testimonials and about
+- Booking flow with dynamic times and client-side validation
+- Confirmation page after successful booking
+- Unit tests for booking form and time helpers
+- Accessibility improvements with semantic markup and ARIA attributes
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- Jest + Testing Library
+- ESLint
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1) Install dependencies
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2) Run development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### 3) Run tests
+
+```bash
+npm test
+```
+
+### 4) Run linting
+
+```bash
+npm run lint
+```
+
+### 5) Build for production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+- `src/components/layout` contains app shell components (`header`, `nav`, `main`, `footer`)
+- `src/components/pages` contains route-level pages
+- `src/components/components` contains reusable UI sections and controls
+- `src/mockAPI` contains mocked API functions for available booking times and submit
+
+## Testing Notes
+
+- Booking form tests: `src/components/components/bookingForm/bookingForm.test.tsx`
+- Times reducer tests: `src/components/layout/main/times.test.ts`
+
+## Accessibility Notes
+
+- Semantic landmarks are used for key layout areas (`header`, `nav`, `main`, `footer`)
+- Form fields use associated labels (`label` + `htmlFor` + `id`)
+- ARIA labels and helper text are included where relevant
